@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='buttons.css') }}">
+
+
+
+</head>
+
+<body>
+    <h1 style="text-align: center;">Task Manager</h1>
+    <form action="/add" method="post" class="task-form">
+        <h2>Add Task</h2>
+        <div class="input-group">
+            <input type="text" name="task_name" placeholder="Task Name" required>
+        </div>
+        <div class="input-group">
+            <input type="text" name="task_description" placeholder="Description">
+        </div>
+        <div class="input-group">
+            <input type="date" name="due_date" required>
+        </div>
+        <div class="input-group">
+            <input type="text" name="priority" placeholder="Priority" required>
+        </div>
+        <div class="input-group">
+            <input type="submit" value="Add Task">
+        </div>
+    </form>
+    <h2>Tasks</h2>
+    <div class="task-list">
+        {% for task in tasks %}
+        <div class="task">
+            <h3>{{ task[1] }}</h3>
+            <p>Description: {{ task[2] }}</p>
+            <p>Due Date: {{ task[3] }}</p>
+            <p>Priority: {{ task[5] }}</p>
+            <div class="task-actions">
+                <a href="/update/{{ task[0] }}" class="button light-blue">Update</a>
+                <a href="/delete/{{ task[0] }}" class="button light-red">Delete</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

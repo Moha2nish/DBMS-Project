@@ -1,0 +1,76 @@
+/* ... (previously defined styles) */
+
+.task-form {
+    margin-bottom: 20px;
+}
+
+.task {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.task h3 {
+    margin-top: 0;
+}
+
+.task p {
+    margin: 5px 0;
+}
+
+.task-actions {
+    margin-top: 10px;
+}
+
+.light-red {
+    background-color: #e74c3c;
+    /* Light red */
+    color: #fff;
+}
+
+.light-red:hover {
+    background-color: #c0392b;
+    /* Darker red on hover */
+}
+
+/* ... (previously defined styles) */
+
+.task-form {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.task-form h2 {
+    margin-top: 0;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="date"],
+.input-group input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-group input[type="submit"] {
+    background-color: #3498db;
+    /* Blue */
+    color: #fff;
+}
+
+.input-group input[type="submit"]:hover {
+    background-color: #2980b9;
+    /* Darker Blue */
+}
